@@ -8,8 +8,37 @@ import org.springframework.stereotype.Service;
 public class FeatureToggleServiceImpl implements FeatureToggleService {
     @Override
     public FeatureToggleResponse getFeatureToggle(String id) {
-        //TODO: implement feature toggle storage.
+        //TODO: implement feature toggle storage and get logic.
 
-        return new FeatureToggleResponse().builder().toggle(true).build();
+        return FeatureToggleResponse
+                .builder()
+                .id(id)
+                .initialState(true)
+                .state(true)
+                .build();
+    }
+
+    @Override
+    public FeatureToggleResponse setFeatureToggle(String id, Boolean initialState) {
+        //TODO: implement feature toggle set logic.
+
+        return FeatureToggleResponse
+                .builder()
+                .id(id)
+                .initialState(true)
+                .state(true)
+                .build();
+    }
+
+    @Override
+    public FeatureToggleResponse resetFeatureToggleToInitialState(String id) {
+        //TODO: implement feature toggle storage and reset logic.
+
+        return FeatureToggleResponse
+                .builder()
+                .id(id)
+                .initialState(true)
+                .state(true)
+                .build();
     }
 }

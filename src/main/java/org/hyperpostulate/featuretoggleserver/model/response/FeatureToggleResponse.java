@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FeatureToggleResponse {
-    private Boolean toggle;
+    private String id;
+    private Boolean initialState;
+    private Boolean state;
 }
